@@ -7,8 +7,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  bCounter:number = 0;
+  iCounter:number = 0;
+
   constructor(public navCtrl: NavController) {
 
   }
 
+  sendBarbara(counter) {
+
+  }
+
+  sendIrmgard(counter) {
+
+  }
 }
