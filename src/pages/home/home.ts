@@ -8,30 +8,31 @@ import { ApiProvider } from '../../providers/api/api';
 })
 export class HomePage {
 
-  bCounter: number = 0;
-  iCounter: number = 0;
-
   constructor(public navCtrl: NavController, public api: ApiProvider) {
 
   }
 
-  sendBarbara(counter) {
-    let body = {
-      'counter': this.bCounter
-    }
-    this.api.post('barbara', body).subscribe((res) => {
+  sendRudolfWakeup() {
+    this.api.get('rudolf/wakeup').subscribe((res) => {
       console.log(res);  
-    });;
-    this.bCounter++;
+    });
   }
 
-  sendIrmgard(counter) {
-    let body = {
-      'counter': this.iCounter
-    }
-    this.api.post('irmgard', body).subscribe((res) => {
+  sendRudolfStatus() {
+    this.api.get('rudolf/orient').subscribe((res) => {
+      console.log(res);  
+    });
+  }
+
+  sendIrmgardWakeup() {
+    this.api.get('irmgard/wakeup').subscribe((res) => {
       console.log(res);
     });
-    this.iCounter++;
+  }
+
+  sendIrmgardStatus() {
+    this.api.get('irmgard/orient').subscribe((res) => {
+      console.log(res);
+    });
   }
 }

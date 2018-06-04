@@ -7,9 +7,11 @@
 </ion-header>
 
 <ion-content padding text-center>
-  <h1>Click the buttons the send fake Alexa monitoring messages to our backend.</h1>
+  <h1>Send Alexa messages to DementAI Dashboard</h1>
   <br/>
-  <button ion-button large round (click)="sendBarbara(bCounter)">Barbara (oriented)</button> <br/>
+  <button ion-button large round (click)="sendRudolfWakeup()">Wake up Rudolf</button> <br/>
+  <button ion-button large round (click)="sendRudolfStatus()">Status Rudolf</button>
   <hr>
-  <button ion-button large color="secondary" round (click)="sendIrmgard(iCounter)">Irmgard (disoriented)</button>
+  <button ion-button large color="secondary" round (click)="sendIrmgardWakeup()">Wake up Irmgard</button> <br/>
+  <button ion-button large color="secondary" round (click)="sendIrmgardStatus()">Status Irmgard</button>
 </ion-content>

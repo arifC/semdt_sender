@@ -11,6 +11,10 @@ export class ApiProvider {
   constructor(public http: HttpClient) {
   }
 
+  get(endpoint: string) {
+    return this.http.get(this.url + '/' + endpoint, {responseType: 'text'});
+  }
+
   post(endpoint: string, body: any, reqOpts?: any) {
     return this.http.post(this.url + '/' + endpoint, body, reqOpts);
   }
