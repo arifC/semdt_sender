@@ -35,4 +35,10 @@ export class HomePage {
       console.log(res);
     });
   }
+
+  reset() {
+    this.api.get('reset').subscribe((res) => {
+      console.log(res);
+    });
+  }
 }
